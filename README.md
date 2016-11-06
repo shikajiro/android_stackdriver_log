@@ -33,7 +33,7 @@ SENDER_ID = 'your FCM sender id'
 SERVER_KEY = 'your FCM server key'
 ```
 
-![](doc_fcm.png)
+![](doc/fcm.png)
 
 ## xmpp start from docker (example GCP)
 ```
