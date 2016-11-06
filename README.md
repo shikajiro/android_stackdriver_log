@@ -6,9 +6,13 @@ AndroidのログをGCPのStackDriverで表示できるようにするプロジ�
 
 `Android -> GCM -> XMPP -> StackDriver`
 
+need 
+1. create Log Forward Server
+2. Android log setting
+
 ![](doc/log_sample.png)
 
-#Logging Server
+#create Log forward Server
 
 ## dependencies
 ### docker
@@ -55,7 +59,7 @@ Let's start Logging Server !!
 docker logs test-xmpp_gcm -f
 ```
 
-# Android 
+# Android log setting
 need fcm(gcm) send process.
 ## Log Setting Example (if use Timber)
 
