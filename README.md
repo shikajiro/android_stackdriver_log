@@ -38,7 +38,7 @@ docker-machine create -d google \
      --google-machine-image https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/debian-8-jessie-v20161027 \
      android_stackdriver_log
 eval $(docker-machine env xmpp)
-docker run --name android_stackdriver_log -d shikajiro/android_stackdriver_log:0.3 -e SENDER_ID='your FCM sender id' -e SERVER_KEY='your FCM server key'
+docker run --name android_stackdriver_log -d -e SENDER_ID='your FCM sender id' -e SERVER_KEY='your FCM server key' shikajiro/android_stackdriver_log:0.4
 
 ```
 
