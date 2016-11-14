@@ -49,7 +49,8 @@ docker-machine create -d google \
      --google-machine-image https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/debian-8-jessie-v20161027 \
      android_stackdriver_log
 eval $(docker-machine env xmpp)
-docker run --name android_stackdriver_log -d shikajiro/android_stackdriver_log:0.1 # this image need xmpp.py
+docker run --name android_stackdriver_log -d shikajiro/android_stackdriver_log:0.3 -e SENDER_ID='123456789012' -e SERVER_KEY='server_key'
+
 ```
 
 Let's start Logging Server !!
