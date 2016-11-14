@@ -1,9 +1,6 @@
 Android of the log is a project to be able to display in StackDriver of GCP.
 Logs are sent to the XMPP server in the GCM, and sends it to the StackDriver Log of GCP.
 
-AndroidのログをGCPのStackDriverで表示できるようにするプロジェクトです。
-ログはGCMでXMPPサーバーに送信され、GCPのStackDriver Logに送ります。
-
 `Android -> GCM -> XMPP -> StackDriver`
 
 need 
