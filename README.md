@@ -43,13 +43,13 @@ SERVER_KEY = 'your FCM server key'
 ```
 gcloud auth login
 docker-machine create -d google \
-     --google-project example \
+     --google-project <gcp_project_name> \
      --google-zone asia-northeast1-c \
-     --google-machine-type "f1-small" \
+     --google-machine-type "f1-micro" \
      --google-machine-image https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/debian-8-jessie-v20161027 \
      xmpp
 eval $(docker-machine env xmpp)
-docker run --name xmpp_gcm -d shikajiro/xmpp_gcm # this image need xmpp.py
+docker run --name xmpp_gcm -d shikajiro/xmpp_gcm:0.1 # this image need xmpp.py
 ```
 
 Let's start Logging Server !!
