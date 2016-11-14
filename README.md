@@ -47,16 +47,16 @@ docker-machine create -d google \
      --google-zone asia-northeast1-c \
      --google-machine-type "f1-micro" \
      --google-machine-image https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/debian-8-jessie-v20161027 \
-     xmpp
+     android_stackdriver_log
 eval $(docker-machine env xmpp)
-docker run --name xmpp_gcm -d shikajiro/xmpp_gcm:0.1 # this image need xmpp.py
+docker run --name android_stackdriver_log -d shikajiro/android_stackdriver_log:0.1 # this image need xmpp.py
 ```
 
 Let's start Logging Server !!
 
 ### docker log
 ```
-docker logs test-xmpp_gcm -f
+docker logs android_stackdriver_log -f
 ```
 
 # Android log setting
