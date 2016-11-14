@@ -26,17 +26,6 @@ need
 network port tcp:8080 grpc
 https://cloud.google.com/solutions/mobile/mobile-compute-engine-grpc
 
-## download
-```
-wget https://raw.githubusercontent.com/shikajiro/xmpp_gcm/master/xmpp.py
-```
-
-### edit xmpp.py
-```xmpp.py
-SENDER_ID = 'your FCM sender id'
-SERVER_KEY = 'your FCM server key'
-```
-
 ![](doc/fcm.png)
 
 ## xmpp start from docker (example GCP)
@@ -49,7 +38,7 @@ docker-machine create -d google \
      --google-machine-image https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/debian-8-jessie-v20161027 \
      android_stackdriver_log
 eval $(docker-machine env xmpp)
-docker run --name android_stackdriver_log -d shikajiro/android_stackdriver_log:0.3 -e SENDER_ID='123456789012' -e SERVER_KEY='server_key'
+docker run --name android_stackdriver_log -d shikajiro/android_stackdriver_log:0.3 -e SENDER_ID='your FCM sender id' -e SERVER_KEY='your FCM server key'
 
 ```
 
